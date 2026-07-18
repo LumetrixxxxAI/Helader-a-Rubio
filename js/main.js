@@ -84,6 +84,94 @@ document.addEventListener('DOMContentLoaded', function () {
     reiniciarAutoplay();
   }
 
+  // ---------- Scroll-spy del menú ----------
+  var navLinks = document.querySelectorAll('.nav-desktop a[href^="#"]');
+  var secciones = Array.prototype.slice.call(navLinks).map(function (link) {
+    return document.querySelector(link.getAttribute('href'));
+  }).filter(Boolean);
+
+  if (navLinks.length && secciones.length && 'IntersectionObserver' in window) {
+    var spyObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var id = '#' + entry.target.id;
+          navLinks.forEach(function (link) {
+            link.classList.toggle('activo', link.getAttribute('href') === id);
+          });
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    secciones.forEach(function (sec) { spyObserver.observe(sec); });
+  }
+
+  // ---------- Contadores animados ----------
+  var contadores = document.querySelectorAll('[data-cuenta]');
+  if (contadores.length && 'IntersectionObserver' in window) {
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var countObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var el = entry.target;
+        var meta = parseInt(el.getAttribute('data-cuenta'), 10);
+        countObserver.unobserve(el);
+        if (reduceMotion) { el.textContent = meta; return; }
+        var inicio = null;
+        var duracion = 1400;
+        function animar(ts) {
+          if (!inicio) inicio = ts;
+          var progreso = Math.min((ts - inicio) / duracion, 1);
+          var facil = 1 - Math.pow(1 - progreso, 3);
+          el.textContent = Math.round(meta * facil);
+          if (progreso < 1) requestAnimationFrame(animar);
+        }
+        requestAnimationFrame(animar);
+      });
+    }, { threshold: 0.6 });
+    contadores.forEach(function (el) { countObserver.observe(el); });
+  }
+
+  // ---------- Botón volver arriba ----------
+  var btnVolverArriba = document.getElementById('btnVolverArriba');
+  if (btnVolverArriba) {
+    window.addEventListener('scroll', function () {
+      btnVolverArriba.classList.toggle('visible', window.scrollY > 700);
+    }, { passive: true });
+    btnVolverArriba.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // ---------- Lightbox de galería ----------
+  var lightbox = document.getElementById('lightbox');
+  var lightboxContenido = document.getElementById('lightboxContenido');
+  var lightboxCerrar = document.getElementById('lightboxCerrar');
+  var itemsGaleria = document.querySelectorAll('.item-galeria');
+
+  function abrirLightbox(html) {
+    lightboxContenido.innerHTML = html;
+    lightbox.classList.add('visible');
+    document.body.style.overflow = 'hidden';
+  }
+  function cerrarLightbox() {
+    lightbox.classList.remove('visible');
+    document.body.style.overflow = '';
+  }
+  itemsGaleria.forEach(function (item) {
+    item.addEventListener('click', function () {
+      var placeholder = item.querySelector('.img-placeholder');
+      abrirLightbox(placeholder ? placeholder.outerHTML : '');
+    });
+  });
+  if (lightboxCerrar) lightboxCerrar.addEventListener('click', cerrarLightbox);
+  if (lightbox) {
+    lightbox.addEventListener('click', function (e) {
+      if (e.target === lightbox) cerrarLightbox();
+    });
+  }
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') cerrarLightbox();
+  });
+
   // ---------- Banner de cookies ----------
   var cookiesBanner = document.getElementById('cookiesBanner');
   var btnAceptar = document.getElementById('btnAceptarCookies');
