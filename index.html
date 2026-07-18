@@ -23,12 +23,12 @@
 <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-<meta name="theme-color" content="#FF6F9C">
+<meta name="theme-color" content="#B5563A">
 
 <!-- Fuentes -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="css/style.css">
 
@@ -71,7 +71,7 @@
 <!-- ============ HEADER ============ -->
 <header class="header" id="header">
   <div class="contenedor">
-    <a href="#inicio" class="logo"><span class="logo-cono">🍦</span> El Rubio</a>
+    <a href="#inicio" class="logo">El <span class="logo-marca">Rubio</span></a>
 
     <nav class="nav-desktop">
       <a href="#sabores">Sabores</a>
@@ -83,7 +83,7 @@
     </nav>
 
     <div class="nav-cta">
-      <a href="tel:+34605079929" class="nav-tel">📞 605 07 99 29</a>
+      <a href="tel:+34605079929" class="nav-tel"><svg class="icono-svg" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 605 07 99 29</a>
       <button class="btn-menu" id="btnMenu" aria-label="Abrir menú">
         <span></span><span></span><span></span>
       </button>
@@ -97,29 +97,21 @@
     <a href="#galeria">Galería</a>
     <a href="#opiniones">Opiniones</a>
     <a href="#ubicacion">Ubicación</a>
-    <a href="tel:+34605079929" class="nav-tel">📞 605 07 99 29</a>
+    <a href="tel:+34605079929" class="nav-tel"><svg class="icono-svg" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 605 07 99 29</a>
   </div>
 </header>
 
 <!-- ============ HERO ============ -->
 <section class="hero" id="inicio">
-  <div class="hero-decoracion">
-    <span class="gota gota1"></span>
-    <span class="gota gota2"></span>
-    <span class="gota gota3"></span>
-    <span class="gota gota4"></span>
-    <span class="gota gota5"></span>
-  </div>
-
   <div class="contenedor">
     <div class="hero-texto">
-      <div class="hero-badge"><span class="estrellas">★★★★★</span> 4,5★ en Google · +560 opiniones</div>
-      <h1>Helado artesanal <span>de toda la vida</span> en Cártama</h1>
-      <p class="hero-direccion">📍 Av. de Andalucía, 105 — Estación de Cártama (Málaga)</p>
+      <h1>Helado artesanal <em>de toda la vida</em> en Cártama</h1>
+      <p class="hero-direccion"><svg class="icono-svg" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Av. de Andalucía, 105 — Estación de Cártama (Málaga)</p>
       <div class="hero-botones">
-        <a href="#sabores" class="btn btn-primario">Ver sabores 🍨</a>
-        <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+de+Andaluc%C3%ADa+105+Estaci%C3%B3n+de+C%C3%A1rtama+M%C3%A1laga" target="_blank" rel="noopener" class="btn btn-secundario">Cómo llegar 🧭</a>
+        <a href="#sabores" class="btn btn-primario">Ver sabores</a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+de+Andaluc%C3%ADa+105+Estaci%C3%B3n+de+C%C3%A1rtama+M%C3%A1laga" target="_blank" rel="noopener" class="btn btn-secundario">Cómo llegar</a>
       </div>
+      <div class="hero-badge"><span class="estrellas">★★★★★</span> 4,5 en Google · +560 opiniones</div>
     </div>
 
     <div class="hero-imagen-wrap">
@@ -127,19 +119,13 @@
         <div class="img-placeholder ph-fresa">FOTO: vitrina de helados / cucurucho de la heladería</div>
       </div>
       <div class="hero-imagen-flotante">
-        <span class="icono-flotante">🚚</span>
+        <svg class="icono-flotante icono-svg" viewBox="0 0 24 24"><rect x="1" y="7" width="15" height="10" rx="1"/><path d="M16 10h4l3 3v4h-7z"/><circle cx="5.5" cy="19.5" r="1.6"/><circle cx="17.5" cy="19.5" r="1.6"/></svg>
         <div>
           <strong>Servicio a domicilio</strong>
           <span>Pide por WhatsApp o teléfono</span>
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="ola">
-    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,64 C240,120 480,0 720,32 C960,64 1200,120 1440,64 L1440,120 L0,120 Z" fill="#FFF8F0"></path>
-    </svg>
   </div>
 </section>
 
@@ -153,45 +139,45 @@
     </div>
 
     <div class="nota-sabores-wrap reveal">
-      <span class="nota-sabores">🍧 Sabores según temporada — pregunta en tienda</span>
+      <span class="nota-sabores">Sabores según temporada — pregunta en tienda</span>
     </div>
 
     <div class="categoria-sabores reveal">
       <h3 class="categoria-titulo"><span class="punto" style="background:var(--fresa)"></span>Clásicos de toda la vida</h3>
       <div class="grid-sabores">
-        <div class="tarjeta-sabor c-fresa"><span class="emoji-sabor">🍓</span><h4>Fresa</h4><p>El de siempre, cremoso y afrutado.</p></div>
-        <div class="tarjeta-sabor c-vainilla"><span class="emoji-sabor">🍦</span><h4>Vainilla</h4><p>Receta clásica de la casa.</p></div>
-        <div class="tarjeta-sabor c-chocolate"><span class="emoji-sabor">🍫</span><h4>Chocolate</h4><p>Intenso, para los golosos.</p></div>
-        <div class="tarjeta-sabor c-blanco"><span class="emoji-sabor">🥛</span><h4>Nata</h4><p>Suave y muy cremosa.</p></div>
-        <div class="tarjeta-sabor c-chocolate"><span class="emoji-sabor">☕</span><h4>Café</h4><p>Para los amantes del cafelito.</p></div>
-        <div class="tarjeta-sabor c-vainilla"><span class="emoji-sabor">🥜</span><h4>Turrón</h4><p>Un clásico con mucho sabor.</p></div>
+        <div class="tarjeta-sabor c-fresa"><h4>Fresa</h4><p>El de siempre, cremoso y afrutado.</p></div>
+        <div class="tarjeta-sabor c-vainilla"><h4>Vainilla</h4><p>Receta clásica de la casa.</p></div>
+        <div class="tarjeta-sabor c-chocolate"><h4>Chocolate</h4><p>Intenso, para los golosos.</p></div>
+        <div class="tarjeta-sabor c-blanco"><h4>Nata</h4><p>Suave y muy cremosa.</p></div>
+        <div class="tarjeta-sabor c-chocolate"><h4>Café</h4><p>Para los amantes del cafelito.</p></div>
+        <div class="tarjeta-sabor c-vainilla"><h4>Turrón</h4><p>Un clásico con mucho sabor.</p></div>
       </div>
     </div>
 
     <div class="categoria-sabores reveal">
       <h3 class="categoria-titulo"><span class="punto" style="background:var(--pistacho)"></span>Originales de la casa</h3>
       <div class="grid-sabores">
-        <div class="tarjeta-sabor c-pistacho"><span class="emoji-sabor">🍰</span><h4>Tarta de queso</h4><p>Con su toque de galleta.</p></div>
-        <div class="tarjeta-sabor c-chocolate"><span class="emoji-sabor">🍪</span><h4>Kinder / Oreo</h4><p>Los favoritos de los peques.</p></div>
-        <div class="tarjeta-sabor c-fresa"><span class="emoji-sabor">🌰</span><h4>Nutella</h4><p>Cremoso y con mucho avellana.</p></div>
-        <div class="tarjeta-sabor c-pistacho"><span class="emoji-sabor">🥨</span><h4>Pistacho con crocanti</h4><p>El más pedido de la temporada.</p></div>
+        <div class="tarjeta-sabor c-pistacho"><h4>Tarta de queso</h4><p>Con su toque de galleta.</p></div>
+        <div class="tarjeta-sabor c-chocolate"><h4>Kinder / Oreo</h4><p>Los favoritos de los peques.</p></div>
+        <div class="tarjeta-sabor c-fresa"><h4>Nutella</h4><p>Cremoso y con mucho avellana.</p></div>
+        <div class="tarjeta-sabor c-pistacho"><h4>Pistacho con crocanti</h4><p>El más pedido de la temporada.</p></div>
       </div>
     </div>
 
     <div class="categoria-sabores reveal">
       <h3 class="categoria-titulo"><span class="punto" style="background:var(--vainilla)"></span>Sorbetes (sin leche)</h3>
       <div class="grid-sabores">
-        <div class="tarjeta-sabor c-vainilla"><span class="emoji-sabor">🍋</span><h4>Limón</h4><p>Refrescante, ideal en verano.</p></div>
-        <div class="tarjeta-sabor c-fresa"><span class="emoji-sabor">🥭</span><h4>Mango</h4><p>Tropical y muy afrutado.</p></div>
-        <div class="tarjeta-sabor c-pistacho"><span class="emoji-sabor">🫐</span><h4>Frutos del bosque</h4><p>Mezcla de frutas del bosque.</p></div>
-        <div class="tarjeta-sabor c-vainilla"><span class="emoji-sabor">🍍</span><h4>Piña colada</h4><p>El sabor del verano.</p></div>
+        <div class="tarjeta-sabor c-vainilla"><h4>Limón</h4><p>Refrescante, ideal en verano.</p></div>
+        <div class="tarjeta-sabor c-fresa"><h4>Mango</h4><p>Tropical y muy afrutado.</p></div>
+        <div class="tarjeta-sabor c-pistacho"><h4>Frutos del bosque</h4><p>Mezcla de frutas del bosque.</p></div>
+        <div class="tarjeta-sabor c-vainilla"><h4>Piña colada</h4><p>El sabor del verano.</p></div>
       </div>
     </div>
 
     <div class="categoria-sabores reveal">
       <h3 class="categoria-titulo"><span class="punto" style="background:var(--chocolate)"></span>Sin lactosa</h3>
       <div class="grid-sabores">
-        <div class="tarjeta-sabor c-blanco"><span class="emoji-sabor">🌱</span><h4>Consulta disponibilidad</h4><p>Tenemos opciones sin lactosa — pregunta en tienda por los sabores del día.</p></div>
+        <div class="tarjeta-sabor c-blanco"><h4>Consulta disponibilidad</h4><p>Tenemos opciones sin lactosa — pregunta en tienda por los sabores del día.</p></div>
       </div>
     </div>
 
@@ -218,27 +204,27 @@
 
     <div class="grid-servicios">
       <div class="tarjeta-servicio reveal reveal-1">
-        <div class="icono-servicio">☕</div>
+        <div class="icono-servicio"><svg class="icono-svg" viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
         <h4>Cafetería</h4>
         <p>Café, cortados e infusiones para tomar con calma.</p>
       </div>
       <div class="tarjeta-servicio reveal reveal-2">
-        <div class="icono-servicio">🥤</div>
+        <div class="icono-servicio"><svg class="icono-svg" viewBox="0 0 24 24"><path d="M6 3h12l-1.3 15.2a2 2 0 0 1-2 1.8H9.3a2 2 0 0 1-2-1.8L6 3z"/><line x1="4" y1="3" x2="20" y2="3"/><line x1="15" y1="1" x2="13" y2="7"/></svg></div>
         <h4>Batidos</h4>
         <p>Batidos cremosos de tus sabores favoritos.</p>
       </div>
       <div class="tarjeta-servicio reveal reveal-3">
-        <div class="icono-servicio">🧊</div>
+        <div class="icono-servicio"><svg class="icono-svg" viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="19.07" y2="4.93"/></svg></div>
         <h4>Granizadas</h4>
         <p>Perfectas para refrescarte en las tardes de calor.</p>
       </div>
       <div class="tarjeta-servicio reveal reveal-4">
-        <div class="icono-servicio">🛍️</div>
+        <div class="icono-servicio"><svg class="icono-svg" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
         <h4>Tarrinas para llevar</h4>
         <p>Llévate tu helado a casa en distintos formatos.</p>
       </div>
       <div class="tarjeta-servicio reveal reveal-1">
-        <div class="icono-servicio">🚚</div>
+        <div class="icono-servicio"><svg class="icono-svg" viewBox="0 0 24 24"><rect x="1" y="7" width="15" height="10" rx="1"/><path d="M16 10h4l3 3v4h-7z"/><circle cx="5.5" cy="19.5" r="1.6"/><circle cx="17.5" cy="19.5" r="1.6"/></svg></div>
         <h4>Helado a domicilio</h4>
         <p>Te lo llevamos a casa. Pide por WhatsApp o teléfono.</p>
       </div>
@@ -259,7 +245,6 @@
       <p>En Heladería El Rubio llevamos años haciendo helado artesanal en Estación de Cártama, con las recetas y el cariño de siempre. Cada bola se hace pensando en que sepa a lo de verdad: sin atajos, con buenos ingredientes y mucha paciencia.</p>
       <p>Somos un negocio familiar y así nos gusta tratar a quien viene: como en casa. Por eso muchos vecinos llevan toda la vida viniendo a por su cucurucho, y ahora también vienen sus hijos. Precios económicos, trato cercano y sabores que no encuentras en cualquier sitio.</p>
       <div class="historia-firma">
-        <span class="icono-familia">👨‍👩‍👧‍👦</span>
         <div>
           <strong>Familia El Rubio</strong>
           <span>Artesanal de verdad, desde siempre en Cártama</span>
@@ -290,7 +275,7 @@
     </div>
 
     <div class="galeria-cta reveal">
-      <p>Síguenos, subimos los sabores nuevos 🍨</p>
+      <p>Síguenos, subimos los sabores nuevos</p>
       <a href="https://www.instagram.com/heladeriaelrubio" target="_blank" rel="noopener" class="btn btn-primario">Ir a @heladeriaelrubio</a>
     </div>
   </div>
@@ -342,14 +327,14 @@
       </div>
 
       <div class="carrusel-controles">
-        <button class="carrusel-flecha" id="flechaAnterior" aria-label="Anterior">←</button>
+        <button class="carrusel-flecha" id="flechaAnterior" aria-label="Anterior"><svg class="icono-svg" viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></button>
         <div class="carrusel-puntos" id="carruselPuntos"></div>
-        <button class="carrusel-flecha" id="flechaSiguiente" aria-label="Siguiente">→</button>
+        <button class="carrusel-flecha" id="flechaSiguiente" aria-label="Siguiente"><svg class="icono-svg" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
       </div>
     </div>
 
     <div class="opiniones-cta reveal">
-      <a href="https://www.google.com/maps/search/?api=1&query=Heladeria+El+Rubio+Av.+de+Andalucia+105+Estacion+de+Cartama" target="_blank" rel="noopener" class="btn btn-secundario">Ver todas en Google →</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Heladeria+El+Rubio+Av.+de+Andalucia+105+Estacion+de+Cartama" target="_blank" rel="noopener" class="btn btn-secundario">Ver todas en Google</a>
     </div>
   </div>
 </section>
@@ -370,7 +355,7 @@
       <h2 class="titulo-seccion" style="margin-bottom:24px;">Te esperamos</h2>
 
       <div class="horario-destacado">
-        <span class="icono-luna">🌙</span>
+        <svg class="icono-luna icono-svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         <div>
           <strong>Abierto todos los días, 15:00–02:00</strong>
           <span>Las noches de verano saben mejor con helado *</span>
@@ -378,19 +363,19 @@
       </div>
 
       <div class="info-fila">
-        <div class="info-icono">📍</div>
+        <div class="info-icono"><svg class="icono-svg" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
         <div class="info-texto"><strong>Dirección</strong><p>Av. de Andalucía, 105 — 29580 Estación de Cártama (Málaga)</p></div>
       </div>
       <div class="info-fila">
-        <div class="info-icono">📞</div>
+        <div class="info-icono"><svg class="icono-svg" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
         <div class="info-texto"><strong>Teléfono</strong><p><a href="tel:+34605079929">605 07 99 29</a></p></div>
       </div>
       <div class="info-fila">
-        <div class="info-icono">📷</div>
+        <div class="info-icono"><svg class="icono-svg" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
         <div class="info-texto"><strong>Instagram</strong><p><a href="https://www.instagram.com/heladeriaelrubio" target="_blank" rel="noopener">@heladeriaelrubio</a></p></div>
       </div>
 
-      <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+de+Andaluc%C3%ADa+105+Estaci%C3%B3n+de+C%C3%A1rtama+M%C3%A1laga" target="_blank" rel="noopener" class="btn btn-primario">Cómo llegar 🧭</a>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+de+Andaluc%C3%ADa+105+Estaci%C3%B3n+de+C%C3%A1rtama+M%C3%A1laga" target="_blank" rel="noopener" class="btn btn-primario">Cómo llegar</a>
       <p class="precios-aviso" style="margin-top:16px;">* Horario a confirmar con el dueño — puede variar en temporada baja.</p>
     </div>
   </div>
@@ -400,12 +385,12 @@
 <footer class="footer">
   <div class="contenedor">
     <div class="footer-col">
-      <div class="footer-logo"><span>🍦</span> Heladería El Rubio</div>
+      <div class="footer-logo">Heladería El <em>Rubio</em></div>
       <p>Helado artesanal de toda la vida en Estación de Cártama. Sabores originales, precios económicos y trato familiar.</p>
       <div class="footer-social">
-        <a href="https://www.instagram.com/heladeriaelrubio" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
-        <a href="tel:+34605079929" aria-label="Llamar">📞</a>
-        <a href="https://wa.me/34605079929" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+        <a href="https://www.instagram.com/heladeriaelrubio" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icono-svg" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="tel:+34605079929" aria-label="Llamar"><svg class="icono-svg" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+        <a href="https://wa.me/34605079929" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="icono-svg" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
       </div>
     </div>
 
@@ -422,8 +407,8 @@
     <div class="footer-col">
       <h5>Contacto</h5>
       <ul>
-        <li><a href="tel:+34605079929">📞 605 07 99 29</a></li>
-        <li><a href="https://www.instagram.com/heladeriaelrubio" target="_blank" rel="noopener">📷 @heladeriaelrubio</a></li>
+        <li><a href="tel:+34605079929">605 07 99 29</a></li>
+        <li><a href="https://www.instagram.com/heladeriaelrubio" target="_blank" rel="noopener">@heladeriaelrubio</a></li>
         <li>Av. de Andalucía, 105<br>Estación de Cártama (Málaga)</li>
       </ul>
     </div>
@@ -441,7 +426,9 @@
 </footer>
 
 <!-- WhatsApp flotante -->
-<a href="https://wa.me/34605079929?text=Hola%2C%20quiero%20hacer%20un%20pedido%20a%20domicilio" target="_blank" rel="noopener" class="whatsapp-flotante" aria-label="Escribir por WhatsApp">💬</a>
+<a href="https://wa.me/34605079929?text=Hola%2C%20quiero%20hacer%20un%20pedido%20a%20domicilio" target="_blank" rel="noopener" class="whatsapp-flotante" aria-label="Escribir por WhatsApp">
+  <svg class="icono-svg" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</a>
 
 <!-- Cookies -->
 <div class="cookies-banner" id="cookiesBanner">
