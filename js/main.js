@@ -172,6 +172,19 @@ document.addEventListener('DOMContentLoaded', function () {
     if (e.key === 'Escape') cerrarLightbox();
   });
 
+  // ---------- Pestañas de ubicación (dos locales) ----------
+  var tabsLocal = document.querySelectorAll('.ubicacion-tab');
+  var panelesLocal = document.querySelectorAll('.ubicacion-grid[data-local-panel]');
+  tabsLocal.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      var local = tab.getAttribute('data-local');
+      tabsLocal.forEach(function (t) { t.classList.toggle('activo', t === tab); });
+      panelesLocal.forEach(function (panel) {
+        panel.hidden = panel.getAttribute('data-local-panel') !== local;
+      });
+    });
+  });
+
   // ---------- Banner de cookies ----------
   var cookiesBanner = document.getElementById('cookiesBanner');
   var btnAceptar = document.getElementById('btnAceptarCookies');
