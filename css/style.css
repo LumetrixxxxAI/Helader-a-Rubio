@@ -431,22 +431,19 @@ section { position: relative; }
 .tarjeta-sabor h4 { font-size: 1.06rem; margin-bottom: 6px; font-weight: 600; }
 .tarjeta-sabor p { font-size: 0.87rem; color: var(--texto-suave); }
 
-.precios-box {
+.precios-aviso { font-size: 0.8rem; color: var(--texto-suave); font-style: italic; max-width: 260px; }
+
+.sabores-cta {
   margin-top: 54px;
-  background: var(--negro);
-  padding: 38px 40px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 20px;
+  padding-top: 34px;
+  border-top: 1px solid var(--linea);
 }
-.precios-lista { display: flex; flex-wrap: wrap; gap: 36px; }
-.precio-item { text-align: left; }
-.precio-item strong { display: block; font-family: var(--ff-display); font-weight: 600; font-size: 1.55rem; color: var(--crema); }
-.precio-item span { font-size: 0.76rem; letter-spacing: 0.04em; text-transform: uppercase; color: rgba(247,243,236,0.55); }
-.precios-aviso { font-size: 0.8rem; color: var(--texto-suave); font-style: italic; max-width: 260px; }
-.precios-box .precios-aviso { color: rgba(247,243,236,0.5); }
+.sabores-cta p { font-family: var(--ff-display); font-size: 1.15rem; font-weight: 500; color: var(--texto); }
 
 /* ============================================
    MÁS QUE HELADOS (sección oscura)
@@ -477,7 +474,56 @@ section { position: relative; }
 }
 .tarjeta-servicio .icono-servicio .icono-svg { width: 19px; height: 19px; }
 .tarjeta-servicio h4 { font-size: 1.1rem; margin-bottom: 8px; font-weight: 600; }
-.tarjeta-servicio p { font-size: 0.9rem; color: rgba(247,243,236,0.6); }
+.tarjeta-servicio p { font-size: 0.9rem; color: rgba(247,243,236,0.6); margin-bottom: 14px; }
+.precio-desde {
+  display: inline-block;
+  font-family: var(--ff-texto);
+  font-weight: 600;
+  font-size: 0.76rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--dorado);
+}
+
+/* -------- Carta detallada (tablas) -------- */
+.carta-detalle { margin-top: 70px; padding-top: 50px; border-top: 1px solid var(--linea-clara); }
+.carta-subtitulo {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--crema);
+  margin: 44px 0 20px;
+}
+.carta-subtitulo:first-child { margin-top: 0; }
+
+.tabla-scroll { overflow-x: auto; border: 1px solid var(--linea-clara); }
+.tabla-precios { width: 100%; border-collapse: collapse; min-width: 620px; }
+.tabla-precios th, .tabla-precios td {
+  padding: 14px 18px;
+  text-align: right;
+  font-size: 0.86rem;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--linea-clara);
+}
+.tabla-precios th:first-child, .tabla-precios td:first-child { text-align: left; }
+.tabla-precios thead th {
+  font-family: var(--ff-texto);
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--rosa);
+}
+.tabla-precios tbody td:first-child { font-family: var(--ff-display); font-weight: 500; color: var(--crema); }
+.tabla-precios tbody td { color: rgba(247,243,236,0.75); }
+.tabla-precios tbody tr:last-child td { border-bottom: none; }
+.tabla-precios tbody tr:hover { background: rgba(198,57,140,0.06); }
+
+.lista-especialidades { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1px; background: var(--linea-clara); border: 1px solid var(--linea-clara); }
+.especialidad-item { background: var(--negro); padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.especialidad-item span { font-size: 0.9rem; color: rgba(247,243,236,0.75); }
+.especialidad-item strong { font-family: var(--ff-display); font-weight: 600; color: var(--dorado); font-size: 1rem; }
+
+.carta-detalle .aviso-confirmar { color: rgba(247,243,236,0.5); }
 
 .aviso-confirmar {
   text-align: center;
@@ -814,8 +860,7 @@ section { position: relative; }
   .grid-galeria { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 150px; }
   .ubicacion-tabs { flex-direction: column; }
   .ubicacion-tab { width: 100%; }
-  .precios-box { flex-direction: column; align-items: flex-start; }
-  .precios-lista { gap: 22px; }
+  .sabores-cta { flex-direction: column; align-items: flex-start; }
   .tarjeta-opinion { padding: 34px 26px; }
   .tarjeta-opinion p { font-size: 1.02rem; }
   .whatsapp-flotante { width: 50px; height: 50px; bottom: 18px; right: 18px; }
