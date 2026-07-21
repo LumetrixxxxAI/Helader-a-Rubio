@@ -12,6 +12,9 @@
   --rosa: #C6398C;
   --rosa-suave: #FBEAF4;
   --dorado: #B08D57;
+  --dorado-suave: #F5EAD5;
+  --verde: #5F7A45;
+  --verde-suave: #E7EEDC;
   --texto: #1C1B1A;
   --texto-suave: #5C5750;
   --blanco: #FFFFFF;
@@ -410,51 +413,61 @@ section { position: relative; }
 /* ============================================
    SABORES
 ============================================ */
-.sabores { background: var(--crema); padding: 110px 0 100px; }
+.sabores { background: var(--crema); padding: 100px 0 90px; }
 
 .nota-sabores {
   text-align: center;
   font-size: 0.9rem;
   color: var(--texto-suave);
   display: inline-block;
-  margin: 0 auto 54px;
+  margin: 0 auto 36px;
   font-weight: 400;
   font-style: italic;
 }
 .nota-sabores-wrap { text-align: center; }
 
-.categoria-sabores { margin-bottom: 58px; }
-.categoria-sabores:last-child { margin-bottom: 0; }
+.sabores-fotos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  max-width: 720px;
+  margin: 0 auto 48px;
+}
+.sabores-fotos .img-placeholder { aspect-ratio: 1/1; font-size: 0.68rem; padding: 8px; }
+.sabores-fotos .img-placeholder::after { font-size: 3.4em; }
 
-.categoria-titulo {
-  font-size: 1.35rem;
-  font-weight: 600;
-  margin-bottom: 26px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid var(--linea);
+.categorias-sabores { display: flex; flex-direction: column; gap: 28px; margin-bottom: 40px; }
+
+.categoria-compacta-titulo {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
+  gap: 10px;
+  font-family: var(--ff-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 14px;
 }
-.categoria-titulo .categoria-num { font-family: var(--ff-texto); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; color: var(--dorado); }
+.categoria-compacta-titulo .categoria-num { font-family: var(--ff-texto); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; color: var(--texto-suave); }
 
-.grid-sabores {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1px;
-  background: var(--linea);
-  border: 1px solid var(--linea);
-}
+.pills-sabores { display: flex; flex-wrap: wrap; gap: 9px; }
 
-.tarjeta-sabor {
-  background: var(--crema);
-  padding: 26px 24px;
-  position: relative;
-  transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
+.pill-sabor {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 18px;
+  border-radius: 50px;
+  font-family: var(--ff-texto);
+  font-weight: 600;
+  font-size: 0.86rem;
+  white-space: nowrap;
+  transition: transform .15s ease, box-shadow .15s ease;
 }
-.tarjeta-sabor:hover { background: var(--rosa-suave); transform: translateY(-3px); box-shadow: 0 16px 30px rgba(28,27,26,0.08); z-index: 1; }
-.tarjeta-sabor h4 { font-size: 1.06rem; margin-bottom: 6px; font-weight: 600; }
-.tarjeta-sabor p { font-size: 0.87rem; color: var(--texto-suave); }
+.pill-sabor:hover { transform: translateY(-2px); box-shadow: 0 8px 16px rgba(28,27,26,0.1); }
+
+.pill-sabor.c-rosa { background: var(--rosa-suave); color: #9C2E6E; }
+.pill-sabor.c-dorado { background: var(--dorado-suave); color: #8A6A35; }
+.pill-sabor.c-verde { background: var(--verde-suave); color: var(--verde); }
+.pill-sabor.c-neutro { background: var(--crema-2); color: var(--texto-suave); border: 1px solid var(--linea); white-space: normal; }
 
 .precios-aviso { font-size: 0.8rem; color: var(--texto-suave); font-style: italic; max-width: 260px; }
 
@@ -917,6 +930,8 @@ section { position: relative; }
   .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 24px 20px; text-align: left; }
   .sabores, .mas-helados, .historia, .galeria, .opiniones, .ubicacion { padding: 76px 0 64px; }
   .grid-galeria { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 150px; }
+  .sabores-fotos { gap: 8px; margin-bottom: 40px; }
+  .pill-sabor { padding: 9px 15px; font-size: 0.82rem; }
   .ubicacion-tabs { flex-direction: column; }
   .ubicacion-tab { width: 100%; }
   .sabores-cta { flex-direction: column; align-items: flex-start; }
