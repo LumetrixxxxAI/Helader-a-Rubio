@@ -343,6 +343,7 @@ section { position: relative; }
 
 .hero-sello {
   position: absolute;
+  z-index: 2;
   bottom: -28px;
   left: -28px;
   width: 118px; height: 118px;
