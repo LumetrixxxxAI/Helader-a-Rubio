@@ -343,6 +343,8 @@ section { position: relative; }
 }
 .hero-imagen:hover { box-shadow: 0 24px 50px rgba(28,27,26,0.16); }
 
+.foto-real { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+
 /* -------- Gráficos decorativos de línea (a juego con el logo) -------- */
 .grafico-decorativo { position: absolute; z-index: 0; pointer-events: none; }
 .grafico-decorativo svg { width: 100%; height: 100%; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
@@ -435,6 +437,17 @@ section { position: relative; }
 }
 .sabores-fotos .img-placeholder { aspect-ratio: 1/1; font-size: 0.68rem; padding: 8px; }
 .sabores-fotos .img-placeholder::after { font-size: 3.4em; }
+.sabores-fotos-item { aspect-ratio: 1/1; overflow: hidden; border-top: 2px solid var(--rosa); position: relative; }
+.sabores-fotos-item:hover .foto-real { transform: scale(1.08); }
+.sabores-fotos-item span {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  padding: 6px 8px;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--crema);
+  background: linear-gradient(0deg, rgba(28,27,26,0.7), transparent);
+}
 
 .categorias-sabores { display: flex; flex-direction: column; gap: 28px; margin-bottom: 40px; }
 
@@ -618,6 +631,7 @@ section { position: relative; }
 .item-galeria { position: relative; cursor: pointer; overflow: hidden; display: block; width: 100%; height: 100%; border: none; background: none; padding: 0; text-align: inherit; }
 .item-galeria .img-placeholder { transition: opacity .3s ease; font-size: 0.8rem; }
 .item-galeria:hover .img-placeholder { opacity: 0.35; }
+.item-galeria:hover .foto-real { transform: scale(1.06); }
 .item-galeria:nth-child(3n+1) { grid-row: span 2; }
 
 .item-galeria::before {
