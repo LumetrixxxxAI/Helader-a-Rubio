@@ -197,6 +197,7 @@ section { position: relative; }
 
 .nav-desktop { display: flex; align-items: center; gap: 4px; }
 .nav-desktop a {
+  position: relative;
   font-family: var(--ff-texto);
   font-weight: 500;
   font-size: 0.8rem;
@@ -206,7 +207,19 @@ section { position: relative; }
   color: rgba(247,243,236,0.75);
   transition: color .2s ease;
 }
+.nav-desktop a::after {
+  content: '';
+  position: absolute;
+  left: 15px; right: 15px;
+  bottom: 5px;
+  height: 1px;
+  background: var(--rosa);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .25s ease;
+}
 .nav-desktop a:hover, .nav-desktop a.activo { color: var(--rosa); }
+.nav-desktop a:hover::after, .nav-desktop a.activo::after { transform: scaleX(1); }
 
 .nav-cta { display: flex; align-items: center; gap: 20px; }
 .nav-tel {
@@ -317,10 +330,21 @@ section { position: relative; }
 
 .hero-imagen-wrap { position: relative; }
 .hero-imagen {
+  position: relative;
+  z-index: 1;
   border: 1px solid var(--linea);
   aspect-ratio: 4/5;
   overflow: hidden;
+  background: var(--crema);
+  transition: box-shadow .35s ease;
 }
+.hero-imagen:hover { box-shadow: 0 24px 50px rgba(28,27,26,0.16); }
+
+/* -------- Gráficos decorativos de línea (a juego con el logo) -------- */
+.grafico-decorativo { position: absolute; z-index: 0; pointer-events: none; }
+.grafico-decorativo svg { width: 100%; height: 100%; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+.hero-grafico { top: -54px; right: -64px; width: 300px; height: 380px; color: var(--rosa); opacity: 0.13; }
 
 .hero-sello {
   position: absolute;
@@ -425,9 +449,10 @@ section { position: relative; }
 .tarjeta-sabor {
   background: var(--crema);
   padding: 26px 24px;
-  transition: background .2s ease;
+  position: relative;
+  transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
 }
-.tarjeta-sabor:hover { background: var(--rosa-suave); }
+.tarjeta-sabor:hover { background: var(--rosa-suave); transform: translateY(-3px); box-shadow: 0 16px 30px rgba(28,27,26,0.08); z-index: 1; }
 .tarjeta-sabor h4 { font-size: 1.06rem; margin-bottom: 6px; font-weight: 600; }
 .tarjeta-sabor p { font-size: 0.87rem; color: var(--texto-suave); }
 
@@ -448,7 +473,9 @@ section { position: relative; }
 /* ============================================
    MÁS QUE HELADOS (sección oscura)
 ============================================ */
-.mas-helados { padding: 110px 0 100px; }
+.mas-helados { padding: 110px 0 100px; position: relative; overflow: hidden; }
+.mas-helados .contenedor { position: relative; z-index: 1; }
+.carta-grafico { top: 40px; left: -80px; width: 260px; height: 340px; color: var(--dorado); opacity: 0.09; transform: rotate(-12deg); }
 
 .grid-servicios {
   display: grid;
@@ -462,17 +489,20 @@ section { position: relative; }
   background: var(--negro);
   padding: 38px 30px;
   text-align: left;
-  transition: background .2s ease;
+  position: relative;
+  transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
 }
-.tarjeta-servicio:hover { background: var(--negro-2); }
+.tarjeta-servicio:hover { background: var(--negro-2); transform: translateY(-3px); box-shadow: 0 20px 36px rgba(0,0,0,0.35); z-index: 1; }
 .tarjeta-servicio .icono-servicio {
   width: 44px; height: 44px;
   border: 1px solid var(--rosa);
   display: flex; align-items: center; justify-content: center;
+  transition: background .2s ease, color .2s ease;
   margin: 0 0 20px;
   color: var(--rosa);
 }
 .tarjeta-servicio .icono-servicio .icono-svg { width: 19px; height: 19px; }
+.tarjeta-servicio:hover .icono-servicio { background: var(--rosa); color: var(--negro); }
 .tarjeta-servicio h4 { font-size: 1.1rem; margin-bottom: 8px; font-weight: 600; }
 .tarjeta-servicio p { font-size: 0.9rem; color: rgba(247,243,236,0.6); margin-bottom: 14px; }
 .precio-desde {
@@ -536,9 +566,24 @@ section { position: relative; }
 /* ============================================
    HISTORIA
 ============================================ */
-.historia { background: var(--crema); padding: 110px 0 100px; }
-.historia .contenedor { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 68px; align-items: center; }
-.historia-imagen { border: 1px solid var(--linea); aspect-ratio: 1/1; overflow: hidden; }
+.historia { background: var(--crema); padding: 110px 0 100px; position: relative; overflow: hidden; }
+.historia .contenedor { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 68px; align-items: center; position: relative; z-index: 1; }
+.historia-numeral {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--ff-display);
+  font-weight: 700;
+  font-size: clamp(9rem, 22vw, 17rem);
+  color: var(--texto);
+  opacity: 0.03;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 0;
+  letter-spacing: -0.02em;
+}
+.historia-imagen { border: 1px solid var(--linea); aspect-ratio: 1/1; overflow: hidden; transition: box-shadow .35s ease; }
+.historia-imagen:hover { box-shadow: 0 24px 50px rgba(28,27,26,0.14); }
 .historia-texto p { margin-bottom: 18px; color: var(--texto-suave); font-size: 1.03rem; }
 .historia-firma { display: flex; align-items: center; gap: 20px; margin-top: 30px; padding-top: 26px; border-top: 1px solid var(--linea); }
 .historia-firma .logo-badge { width: 52px; height: 52px; border-color: var(--linea); }
@@ -598,8 +643,22 @@ section { position: relative; }
 .tarjeta-opinion {
   padding: 50px 44px;
   text-align: center;
+  position: relative;
 }
-.tarjeta-opinion .estrellas { color: var(--dorado); font-size: 1.15rem; letter-spacing: 3px; margin-bottom: 20px; }
+.tarjeta-opinion::before {
+  content: '\201C';
+  position: absolute;
+  top: 6px; left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--ff-display);
+  font-style: italic;
+  font-size: 5rem;
+  color: var(--rosa);
+  opacity: 0.18;
+  line-height: 1;
+  pointer-events: none;
+}
+.tarjeta-opinion .estrellas { color: var(--dorado); font-size: 1.15rem; letter-spacing: 3px; margin-bottom: 20px; position: relative; }
 .tarjeta-opinion p { font-size: 1.15rem; color: var(--crema); margin-bottom: 26px; font-family: var(--ff-display); font-weight: 400; font-style: italic; line-height: 1.5; }
 .tarjeta-opinion .autor { display: flex; align-items: center; justify-content: center; gap: 12px; }
 .avatar-opinion {
