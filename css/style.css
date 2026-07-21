@@ -517,7 +517,7 @@ section { position: relative; }
 }
 .tarjeta-servicio .icono-servicio .icono-svg { width: 20px; height: 20px; }
 .tarjeta-servicio:hover .icono-servicio { background: var(--rosa); color: var(--blanco); }
-.tarjeta-servicio h4 { font-size: 1.15rem; margin-bottom: 8px; font-weight: 700; }
+.tarjeta-servicio h4 { font-size: 1.15rem; margin-bottom: 8px; font-weight: 700; color: var(--texto); }
 .tarjeta-servicio p { font-size: 0.9rem; color: var(--texto-suave); margin-bottom: 14px; }
 .precio-desde {
   display: inline-block;
