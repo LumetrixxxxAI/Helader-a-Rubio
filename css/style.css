@@ -896,7 +896,7 @@ section { position: relative; }
   color: var(--blanco);
   transition: transform .2s ease, background .2s ease;
 }
-.whatsapp-flotante .icono-svg { width: 26px; height: 26px; }
+.icono-whatsapp { width: 26px; height: 26px; fill: currentColor; stroke: none; flex-shrink: 0; }
 .whatsapp-flotante:hover { transform: translateY(-3px) scale(1.05); }
 
 .volver-arriba {
@@ -1026,7 +1026,7 @@ section { position: relative; }
   .tarjeta-opinion { padding: 34px 26px; }
   .tarjeta-opinion p { font-size: 1.05rem; }
   .whatsapp-flotante { width: 52px; height: 52px; bottom: 18px; right: 18px; }
-  .whatsapp-flotante .icono-svg { width: 24px; height: 24px; }
+  .icono-whatsapp { width: 24px; height: 24px; }
   .volver-arriba { width: 40px; height: 40px; bottom: 18px; left: 18px; }
   .cookies-banner { left: 12px; right: 12px; bottom: 12px; padding: 18px 20px; flex-direction: column; align-items: stretch; }
   .cookies-botones { justify-content: stretch; }
