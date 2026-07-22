@@ -436,20 +436,8 @@ section { position: relative; }
   background: linear-gradient(0deg, rgba(58,31,46,0.75), transparent);
 }
 
-.categorias-sabores { display: flex; flex-direction: column; gap: 28px; margin-bottom: 40px; }
-
-.categoria-compacta-titulo {
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
-  font-family: var(--ff-display);
-  font-size: 1.15rem;
-  font-weight: 700;
-  margin-bottom: 14px;
-}
-.categoria-compacta-titulo .categoria-num { font-family: var(--ff-texto); font-size: 0.68rem; font-weight: 800; letter-spacing: 0.08em; color: var(--texto-suave); }
-
 .pills-sabores { display: flex; flex-wrap: wrap; gap: 10px; }
+.pills-sabores-todos { justify-content: center; gap: 12px; margin-bottom: 8px; }
 
 .pill-sabor {
   display: inline-flex;
