@@ -673,7 +673,7 @@ section { position: relative; }
 .grid-galeria {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 190px;
+  grid-auto-rows: 220px;
   gap: 12px;
 }
 .item-galeria { position: relative; cursor: pointer; overflow: hidden; display: block; width: 100%; height: 100%; border: none; background: none; padding: 0; text-align: inherit; border-radius: 20px; box-shadow: var(--sombra-suave); transition: box-shadow .25s ease; }
@@ -681,7 +681,6 @@ section { position: relative; }
 .item-galeria .img-placeholder { transition: opacity .3s ease; font-size: 0.8rem; }
 .item-galeria:hover .img-placeholder { opacity: 0.35; }
 .item-galeria:hover .foto-real { transform: scale(1.06); }
-.item-galeria:nth-child(3n+1) { grid-row: span 2; }
 
 .item-galeria::before {
   content: '@heladeriaelrubio';
@@ -1036,7 +1035,6 @@ section { position: relative; }
 
 @media (max-width: 420px) {
   .grid-galeria { grid-template-columns: repeat(2, 1fr); }
-  .item-galeria:nth-child(3n+1) { grid-row: span 1; }
 }
 
 /* Reduce motion */
