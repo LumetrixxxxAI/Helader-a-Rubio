@@ -1,29 +1,29 @@
 /* ============================================
    HELADERÍA EL RUBIO — estilos
-   Dirección de arte: STREET FOOD — cartel urbano, pegatinas, papel kraft
-   Paleta: negro asfalto #171512 · kraft #F5EFE0 · rosa eléctrico #FF2E7E · amarillo mostaza #FFC700 · teal #00B4A6
+   Dirección de arte: STREET FOOD ROSA/MORADO — pegatinas sobre blanco
+   Paleta: morado tinta #3A0E52 · blanco #FFFFFF · rosa palo #F6CBE0 · rosa #FF2E88 · morado vivo #9B2FD1
 ============================================ */
 
 :root {
-  --negro: #171512;
-  --negro-2: #272219;
-  --crema: #F5EFE0;
-  --crema-2: #EAE0C4;
-  --rosa: #FF2E7E;
-  --rosa-suave: #FFD6E8;
-  --rosa-fuerte: #C4185F;
-  --menta: #00B4A6;
-  --menta-suave: #B0F0E6;
-  --menta-fuerte: #00726A;
-  --dorado: #FFC700;
-  --dorado-suave: #FFF0AD;
-  --verde: #8BC53F;
-  --verde-suave: #E4F2C7;
-  --texto: #171512;
-  --texto-suave: #5C5347;
+  --negro: #3A0E52;
+  --negro-2: #4D1868;
+  --crema: #FFFFFF;
+  --crema-2: #FBEFF6;
+  --rosa: #FF2E88;
+  --rosa-suave: #F6CBE0;
+  --rosa-fuerte: #C41C6B;
+  --menta: #6B1F9E;
+  --menta-suave: #E7D6F5;
+  --menta-fuerte: #4A1670;
+  --dorado: #B84FE8;
+  --dorado-suave: #F3E2FA;
+  --verde: #B24FC0;
+  --verde-suave: #F1DCF0;
+  --texto: #2E0A42;
+  --texto-suave: #7A5C8C;
   --blanco: #FFFFFF;
-  --linea: rgba(23,21,18,0.18);
-  --linea-clara: rgba(245,239,224,0.24);
+  --linea: rgba(58,14,82,0.18);
+  --linea-clara: rgba(255,255,255,0.4);
   --radio: 12px;
   --borde: 3px solid var(--negro);
   --sombra: 7px 7px 0 var(--negro);
@@ -61,7 +61,7 @@ button { font: inherit; }
   left: 12px;
   z-index: 2000;
   background: var(--dorado);
-  color: var(--negro);
+  color: var(--blanco);
   font-family: var(--ff-texto);
   font-weight: 800;
   font-size: 0.85rem;
@@ -109,7 +109,7 @@ section { position: relative; }
   font-size: 0.76rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--negro);
+  color: var(--blanco);
   background: var(--dorado);
   border: 2px solid var(--negro);
   padding: 6px 14px;
@@ -139,7 +139,7 @@ section { position: relative; }
 
 .seccion-oscura { background: var(--negro); color: var(--crema); }
 .seccion-oscura .titulo-seccion, .seccion-oscura h3, .seccion-oscura h4 { color: var(--crema); }
-.seccion-oscura .subtitulo-seccion { color: rgba(245,239,224,0.65); }
+.seccion-oscura .subtitulo-seccion { color: rgba(255,255,255,0.65); }
 
 .seccion-menta { background: var(--menta-suave); }
 .seccion-rosa { background: var(--rosa-suave); }
@@ -186,7 +186,7 @@ section { position: relative; }
 
 .btn-secundario {
   background: var(--dorado);
-  color: var(--negro);
+  color: var(--blanco);
 }
 
 .btn-outline-claro {
@@ -228,10 +228,10 @@ section { position: relative; }
   text-transform: uppercase;
   padding: 10px 14px;
   border-radius: 6px;
-  color: rgba(245,239,224,0.8);
+  color: rgba(255,255,255,0.8);
   transition: color .2s ease, background .2s ease;
 }
-.nav-desktop a:hover, .nav-desktop a.activo { color: var(--negro); background: var(--dorado); }
+.nav-desktop a:hover, .nav-desktop a.activo { color: var(--blanco); background: var(--dorado); }
 
 .nav-cta { display: flex; align-items: center; gap: 20px; }
 .nav-tel {
@@ -289,7 +289,7 @@ section { position: relative; }
   padding-top: 132px;
   padding-bottom: 90px;
   background:
-    radial-gradient(circle, rgba(23,21,18,0.09) 2px, transparent 2px),
+    radial-gradient(circle, rgba(58,14,82,0.09) 2px, transparent 2px),
     var(--crema);
   background-size: 22px 22px;
   overflow: hidden;
@@ -381,9 +381,9 @@ section { position: relative; }
   font-weight: 700;
   font-size: 0.85rem;
   letter-spacing: 0.01em;
-  color: rgba(23,21,18,0.55);
+  color: rgba(58,14,82,0.55);
   background-color: var(--crema-2);
-  background-image: repeating-linear-gradient(135deg, rgba(23,21,18,0.04) 0 1px, transparent 1px 22px);
+  background-image: repeating-linear-gradient(135deg, rgba(58,14,82,0.04) 0 1px, transparent 1px 22px);
   overflow: hidden;
 }
 .img-placeholder::after {
@@ -459,7 +459,7 @@ section { position: relative; }
   font-size: 0.95rem;
   letter-spacing: 0.01em;
   color: var(--crema);
-  background: linear-gradient(0deg, rgba(23,21,18,0.85), transparent 75%);
+  background: linear-gradient(0deg, rgba(58,14,82,0.85), transparent 75%);
 }
 
 .sabores-divisor {
@@ -530,7 +530,7 @@ section { position: relative; }
 .pill-sabor:hover { transform: translate(-2px, -2px); box-shadow: 4px 4px 0 var(--negro); }
 
 .pill-sabor.c-rosa { background: var(--rosa-suave); color: var(--rosa-fuerte); }
-.pill-sabor.c-dorado { background: var(--dorado-suave); color: #7A5A00; }
+.pill-sabor.c-dorado { background: var(--dorado-suave); color: var(--menta-fuerte); }
 .pill-sabor.c-verde { background: var(--menta-suave); color: var(--menta-fuerte); }
 .pill-sabor.c-neutro { background: var(--crema-2); color: var(--texto-suave); white-space: normal; text-transform: none; font-weight: 700; }
 
@@ -582,7 +582,7 @@ section { position: relative; }
   display: flex; align-items: center; justify-content: center;
   transition: background .2s ease, color .2s ease;
   margin: 0 0 18px;
-  color: var(--negro);
+  color: var(--blanco);
 }
 .tarjeta-servicio .icono-servicio .icono-svg { width: 20px; height: 20px; }
 .tarjeta-servicio:hover .icono-servicio { background: var(--rosa); color: var(--blanco); }
@@ -593,7 +593,7 @@ section { position: relative; }
   font-family: var(--ff-texto);
   font-weight: 800;
   font-size: 0.82rem;
-  color: var(--negro);
+  color: var(--blanco);
   background: var(--menta);
   border: 2px solid var(--negro);
   padding: 5px 12px;
@@ -601,7 +601,7 @@ section { position: relative; }
 }
 
 /* -------- Carta detallada (tablas) -------- */
-.carta-detalle { margin-top: 70px; padding-top: 50px; border-top: 3px dashed rgba(245,239,224,0.3); }
+.carta-detalle { margin-top: 70px; padding-top: 50px; border-top: 3px dashed rgba(255,255,255,0.3); }
 .carta-subtitulo {
   font-family: var(--ff-display);
   font-weight: 400;
@@ -629,7 +629,7 @@ section { position: relative; }
   font-size: 0.74rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--negro);
+  color: var(--blanco);
   background: var(--dorado);
   border-bottom: 3px solid var(--negro);
 }
@@ -655,7 +655,7 @@ section { position: relative; }
 .especialidad-item span { font-family: var(--ff-texto); font-weight: 700; font-size: 0.92rem; color: var(--texto); }
 .especialidad-item strong { font-family: var(--ff-display); font-weight: 400; color: var(--rosa); font-size: 1.05rem; }
 
-.carta-detalle .aviso-confirmar { color: rgba(245,239,224,0.55); }
+.carta-detalle .aviso-confirmar { color: rgba(255,255,255,0.55); }
 
 .aviso-confirmar {
   text-align: center;
@@ -678,7 +678,7 @@ section { position: relative; }
   font-weight: 400;
   font-size: clamp(9rem, 22vw, 17rem);
   color: transparent;
-  -webkit-text-stroke: 2px rgba(23,21,18,0.08);
+  -webkit-text-stroke: 2px rgba(58,14,82,0.08);
   white-space: nowrap;
   pointer-events: none;
   z-index: 0;
@@ -739,7 +739,7 @@ section { position: relative; }
   font-weight: 400;
   text-transform: uppercase;
   font-size: 0.85rem;
-  background: rgba(23,21,18,0.55);
+  background: rgba(58,14,82,0.55);
   opacity: 0;
   transition: opacity .3s ease;
   pointer-events: none;
@@ -793,7 +793,7 @@ section { position: relative; }
   font-family: var(--ff-display); font-weight: 400;
 }
 .tarjeta-opinion .autor strong { display: block; font-size: 0.95rem; font-weight: 800; color: var(--crema); }
-.tarjeta-opinion .autor span { font-size: 0.8rem; color: rgba(245,239,224,0.55); }
+.tarjeta-opinion .autor span { font-size: 0.8rem; color: rgba(255,255,255,0.55); }
 
 .carrusel-controles { display: flex; align-items: center; justify-content: center; gap: 22px; margin-top: 32px; }
 .carrusel-flecha {
@@ -809,7 +809,7 @@ section { position: relative; }
 .carrusel-flecha .icono-svg { width: 16px; height: 16px; }
 .carrusel-flecha:hover { background: var(--rosa); border-color: var(--rosa); transform: scale(1.08); }
 .carrusel-puntos { display: flex; gap: 8px; }
-.punto-carrusel { width: 8px; height: 8px; border-radius: 50%; background: rgba(245,239,224,0.25); border: none; cursor: pointer; transition: background .25s ease, transform .25s ease; }
+.punto-carrusel { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.25); border: none; cursor: pointer; transition: background .25s ease, transform .25s ease; }
 .punto-carrusel.activo { background: var(--dorado); transform: scale(1.6); }
 
 .opiniones-cta { text-align: center; margin-top: 40px; }
@@ -905,10 +905,10 @@ section { position: relative; }
 .footer-logo .logo-badge { width: 48px; height: 48px; }
 .footer-logo-texto { font-family: var(--ff-display); font-weight: 400; text-transform: uppercase; font-size: 1.4rem; color: var(--crema); }
 .footer-logo-texto span { display: block; font-family: var(--ff-texto); font-weight: 800; text-transform: uppercase; font-size: 0.65rem; letter-spacing: 0.14em; color: var(--dorado); margin-top: 3px; }
-.footer-col p { color: rgba(245,239,224,0.6); font-size: 0.9rem; margin-bottom: 10px; font-weight: 500; }
+.footer-col p { color: rgba(255,255,255,0.6); font-size: 0.9rem; margin-bottom: 10px; font-weight: 500; }
 .footer-col h5 { font-family: var(--ff-display); font-weight: 400; text-transform: uppercase; font-size: 1rem; color: var(--dorado); margin-bottom: 20px; }
 .footer-col ul li { margin-bottom: 12px; }
-.footer-col a { color: rgba(245,239,224,0.7); font-size: 0.9rem; font-weight: 600; transition: color .2s ease; }
+.footer-col a { color: rgba(255,255,255,0.7); font-size: 0.9rem; font-weight: 600; transition: color .2s ease; }
 .footer-col a:hover { color: var(--rosa); }
 .footer-social { display: flex; gap: 10px; margin-top: 20px; }
 .footer-social a {
@@ -930,9 +930,9 @@ section { position: relative; }
   justify-content: space-between;
   gap: 10px;
   font-size: 0.8rem;
-  color: rgba(245,239,224,0.5);
+  color: rgba(255,255,255,0.5);
 }
-.footer-bottom a { color: rgba(245,239,224,0.7); }
+.footer-bottom a { color: rgba(255,255,255,0.7); }
 .footer-bottom a:hover { color: var(--rosa); }
 
 /* ============================================
@@ -964,7 +964,7 @@ section { position: relative; }
   background: var(--dorado);
   border: 3px solid var(--negro);
   display: flex; align-items: center; justify-content: center;
-  color: var(--negro);
+  color: var(--blanco);
   cursor: pointer;
   z-index: 900;
   opacity: 0;
@@ -981,7 +981,7 @@ section { position: relative; }
   position: fixed;
   inset: 0;
   z-index: 2000;
-  background: rgba(23,21,18,0.94);
+  background: rgba(58,14,82,0.94);
   display: flex;
   align-items: center;
   justify-content: center;
