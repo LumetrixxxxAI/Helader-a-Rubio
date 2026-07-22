@@ -1006,34 +1006,47 @@ section { position: relative; }
 }
 
 @media (max-width: 640px) {
-  .contenedor { padding: 0 18px; }
-  .btn { padding: 13px 22px; font-size: 0.85rem; }
-  .titulo-seccion { font-size: clamp(1.6rem, 7vw, 2.1rem); }
-  .subtitulo-seccion { font-size: 0.96rem; margin-bottom: 32px; }
-  .hero { padding-top: 92px; padding-bottom: 56px; }
-  .hero-texto h1 { font-size: clamp(1.9rem, 8.5vw, 2.5rem); margin-bottom: 16px; }
-  .hero-direccion { font-size: 0.92rem; margin-bottom: 26px; }
-  .hero-imagen-wrap { max-width: 260px; }
-  .hero-sello { width: 84px; height: 84px; }
-  .hero-botones { flex-direction: column; width: 100%; margin-bottom: 32px; }
+  html { font-size: 15px; }
+  body { line-height: 1.5; }
+  .contenedor { padding: 0 16px; }
+  .btn { padding: 10px 18px; font-size: 0.8rem; }
+  .titulo-seccion { font-size: clamp(1.4rem, 6.2vw, 1.8rem); margin-bottom: 8px; }
+  .subtitulo-seccion { font-size: 0.9rem; margin-bottom: 22px; }
+  .cabecera-seccion { margin-bottom: 4px; }
+  .etiqueta { margin-bottom: 10px; }
+  .hero { padding-top: 84px; padding-bottom: 36px; }
+  .hero-texto h1 { font-size: clamp(1.6rem, 7.5vw, 2.1rem); margin-bottom: 10px; }
+  .hero-direccion { font-size: 0.86rem; margin-bottom: 16px; }
+  .hero-imagen-wrap { max-width: 200px; }
+  .hero-sello { width: 60px; height: 60px; bottom: -16px; }
+  .hero-botones { flex-direction: column; width: 100%; margin-bottom: 20px; gap: 10px; }
   .hero-botones .btn { width: 100%; }
-  .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 18px 20px; text-align: left; padding-top: 20px; }
-  .hero-stat strong { font-size: 1.35rem; }
-  .hero-stat span { font-size: 0.68rem; }
-  .sabores, .mas-helados, .historia, .galeria, .opiniones, .ubicacion { padding: 56px 0 48px; }
-  .grid-galeria { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 150px; }
-  .sabores-fotos { grid-template-columns: repeat(2, 1fr); gap: 14px; margin-bottom: 10px; }
+  .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 10px 16px; text-align: left; padding-top: 14px; }
+  .hero-stat strong { font-size: 1.1rem; }
+  .hero-stat span { font-size: 0.62rem; }
+  .sabores, .mas-helados, .historia, .galeria, .opiniones, .ubicacion { padding: 40px 0 32px; }
+  .historia-imagen { max-width: 220px; }
+  .historia-texto p { margin-bottom: 12px; font-size: 0.95rem; }
+  .grid-galeria { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 120px; gap: 8px; }
+  .sabores-fotos { grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 8px; }
   .sabores-fotos-item:nth-child(odd), .sabores-fotos-item:nth-child(even) { transform: rotate(0deg); }
   .sabores-fotos-item:hover { transform: scale(1.03); }
-  .sabores-panel { padding: 30px 18px; border-radius: 26px; }
-  .sabores-divisor { margin: 32px 0 24px; }
-  .pill-sabor { padding: 11px 18px; font-size: 0.92rem; }
-  .pills-sabores-todos { gap: 10px; }
-  .ubicacion-tabs { flex-direction: column; }
-  .ubicacion-tab { width: 100%; }
-  .sabores-cta { flex-direction: column; align-items: flex-start; }
-  .tarjeta-opinion { padding: 34px 26px; }
-  .tarjeta-opinion p { font-size: 1.05rem; }
+  .sabores-panel { padding: 22px 14px; border-radius: 22px; }
+  .sabores-divisor { margin: 22px 0 16px; }
+  .pill-sabor { padding: 8px 14px; font-size: 0.82rem; }
+  .pills-sabores-todos { gap: 8px; }
+  .grid-servicios { gap: 12px; }
+  .tarjeta-servicio { padding: 20px 18px; }
+  .lista-especialidades { gap: 8px; }
+  .especialidad-item { padding: 11px 16px; }
+  .ubicacion-tabs { flex-direction: column; margin-bottom: 24px; }
+  .ubicacion-tab { width: 100%; padding: 10px 20px; }
+  .ubicacion-info { padding: 28px 22px; }
+  .sabores-cta { flex-direction: column; align-items: flex-start; margin-top: 32px; padding-top: 22px; }
+  .tarjeta-opinion { padding: 24px 20px; }
+  .tarjeta-opinion p { font-size: 0.98rem; margin-bottom: 18px; }
+  .footer { padding: 44px 0 20px; }
+  .footer .contenedor { margin-bottom: 30px; }
   .whatsapp-flotante { width: 52px; height: 52px; bottom: 18px; right: 18px; }
   .icono-whatsapp { width: 24px; height: 24px; }
   .volver-arriba { width: 40px; height: 40px; bottom: 18px; left: 18px; }
