@@ -1007,11 +1007,20 @@ section { position: relative; }
 
 @media (max-width: 640px) {
   .contenedor { padding: 0 18px; }
-  .hero { padding-top: 108px; padding-bottom: 100px; }
-  .hero-botones { flex-direction: column; width: 100%; }
+  .btn { padding: 13px 22px; font-size: 0.85rem; }
+  .titulo-seccion { font-size: clamp(1.6rem, 7vw, 2.1rem); }
+  .subtitulo-seccion { font-size: 0.96rem; margin-bottom: 32px; }
+  .hero { padding-top: 92px; padding-bottom: 56px; }
+  .hero-texto h1 { font-size: clamp(1.9rem, 8.5vw, 2.5rem); margin-bottom: 16px; }
+  .hero-direccion { font-size: 0.92rem; margin-bottom: 26px; }
+  .hero-imagen-wrap { max-width: 260px; }
+  .hero-sello { width: 84px; height: 84px; }
+  .hero-botones { flex-direction: column; width: 100%; margin-bottom: 32px; }
   .hero-botones .btn { width: 100%; }
-  .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 24px 20px; text-align: left; }
-  .sabores, .mas-helados, .historia, .galeria, .opiniones, .ubicacion { padding: 76px 0 64px; }
+  .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 18px 20px; text-align: left; padding-top: 20px; }
+  .hero-stat strong { font-size: 1.35rem; }
+  .hero-stat span { font-size: 0.68rem; }
+  .sabores, .mas-helados, .historia, .galeria, .opiniones, .ubicacion { padding: 56px 0 48px; }
   .grid-galeria { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 150px; }
   .sabores-fotos { grid-template-columns: repeat(2, 1fr); gap: 14px; margin-bottom: 10px; }
   .sabores-fotos-item:nth-child(odd), .sabores-fotos-item:nth-child(even) { transform: rotate(0deg); }
